@@ -1,0 +1,22 @@
+
+robot_ID: [1, 2, 3, 4] # unique ID for each robot
+
+formation:
+  1: 
+    member: [1, 2, 3, 4] # dictate the ordering of the offset and distance
+    init_cent: [-1.8, -0.6, 0.]
+    cent_offset: [
+      [ 0.25,  0.5, 0.],
+      [-0.25,  0.5, 0.],
+      [-0.25, -0.5, 0.],
+      [ 0.25, -0.5, 0.]
+    ]
+    distance: [
+      [0.   , 0.5  , 1.118, 1.  ],
+      [0.5  , 0.   , 1.  , 1.118],
+      [1.118, 1.   , 0.  , 0.5 ],
+      [1.   , 1.118, 0.5 , 0.  ]
+    ]
+    tolerance: 0.05 # uniformed tolerance for maintaining distance
+    
+
