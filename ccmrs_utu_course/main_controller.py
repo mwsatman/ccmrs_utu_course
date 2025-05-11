@@ -85,23 +85,31 @@ class Controller():
     def __init__(self, robot_ID, scenario_dict):
         self.robot_ID = robot_ID
 
+        ## ------------------------------------
+        # INITIATE ALL VARIABLES FOR CONTROLLER
+        ## ------------------------------------
+
 
 
 
     def compute_control_input(self, estimation_dict):
         current_pos = estimation_dict.lahead_pos
 
-        # Compute nominal control (GoToGoal + Formation Maintenance)
+        ## ------------------------------------
+        # CONTROLLER CALCULATION
+        ## ------------------------------------
+        # Compute nominal control # TODO
         vx = 0.1
         vy = 0.1
-
         u_nom = np.array([vx, vy, 0])
 
+        # Implement safety controller # TODO
         vel_command = u_nom
 
-
+        # return the resulting control input
         estimation_dict.vel_command = vel_command
         return vel_command
+
 
 
     @staticmethod
